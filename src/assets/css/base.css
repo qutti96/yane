@@ -1,0 +1,13 @@
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  @media (--sp) {
+    font-size: 14px;
+  }
+}
+body {
+  min-width: 320px;
+  letter-spacing: 0.04em;
+}

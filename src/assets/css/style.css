@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*!
+Theme Name: Sample
+Author: Hiromi Kozai
+Author URI: https://webiscuit.jp
+Version: 1.0
+*/
+
+/*୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧
+  Settings
+  ୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧*/
+
+/*୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧
+  Foundation
+  ୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧*/
+@import "./base.css";

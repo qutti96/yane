@@ -1,0 +1,47 @@
+{
+  "name": "nuxt",
+  "version": "1.0.0",
+  "description": "My hunky-dory Nuxt.js project",
+  "author": "Hiromi Kozai <dev@webiscuit.jp> (https://webiscuit.jp)",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/webiscuit/boilerplate"
+  },
+  "scripts": {
+    "dev": "cross-env HOST=192.168.11.9 PORT=52638 nuxt",
+    "build": "nuxt build",
+    "start": "cross-env HOST=192.168.11.9 PORT=3000 nuxt start",
+    "generate": "nuxt generate"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.0",
+    "firebase": "^7.21.0",
+    "hooper": "^0.3.4",
+    "jquery": "^3.5.1",
+    "nuxt": "^2.0.0",
+    "stickyfilljs": "^2.1.0",
+    "swiper": "^6.2.0",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-slick": "^1.1.15",
+    "vue-slick-carousel": "^1.0.6"
+  },
+  "devDependencies": {
+    "@bazzite/nuxt-optimized-images": "^0.3.0",
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "cross-env": "^7.0.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "postcss-calc": "^7.0.1",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-short": "^5.0.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0"
+  }
+}
