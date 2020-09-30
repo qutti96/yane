@@ -9,7 +9,7 @@
       </div>
       <div class="header-logo__wrap2">
         <p class="header__subtitle leading-none">屋根の葺き替えリフォーム・塗装・修理の専門サイト</p>
-        <a class="header-btn-entry hover--op leading-none font-bld" href="#">加盟工事店募集中</a>
+        <a class="header-btn-entry hover--op leading-none font-bld" href="/member/">加盟工事店募集中</a>
       </div>
       <div class="header-logo__wrap3 mr-6">
         <p class="flex mb-2"><img class="header-tel__img inline" src="/img/common/icon_tel@2x.png" alt="電話番号" /><span class="header-tel__txt leading-none">0120-690-287</span></p>
@@ -18,20 +18,24 @@
             <p class="header__text--s">24時間電話受付</p>
           </div>
       </div>
-      <div class="header-logo__wrap4">
-        <a class="btn-estimation" href="/">
-          <img class="btn-estimation__img" src="/img/common/icon_cal@2x.png" alt=""/>
-          <span class="leading-none">無料簡単見積</span>
-        </a>
-      </div>
-      <div id="js-btn-sp" class="btn-sp pc-none">
-        <span class="btn-sp__line"></span>
-        <span class="btn-sp__line"></span>
-        <span class="btn-sp__line"></span>
-      </div>
+      <div class="header-logo__wrap4"><a class="btn-estimation" href="/"><img class="btn-estimation__img" src="/img/common/icon_cal@2x.png" alt=""/><span class="leading-none">無料簡単見積</span></a></div>
+      <div class="btn-sp pc-none" v-on:click="toggleMenu" v-bind:class="{'is-active': isActive }"><span class="btn-sp__line"></span><span class="btn-sp__line"></span><span class="btn-sp__line"></span></div>
     </div>
   </div>
-    <nav class="gnav">
+  <transition name="gnav">
+    <nav class="gnav" v-bind:class="{'is-active': isActive }" v-show="gnav">
+      <div class="container mx-auto">
+        <ul class="gnav__wrap">
+          <li class="gnav__list"><a class="gnav__anchor" href="/">ホーム</a></li>
+          <li class="gnav__list"><a class="gnav__anchor" href="#">屋根コネクトとは</a></li>
+          <li class="gnav__list"><a class="gnav__anchor" href="#">施工店の基準</a></li>
+          <li class="gnav__list"><a class="gnav__anchor" href="#">屋根の費用相場</a></li>
+          <li class="gnav__list"><a class="gnav__anchor" href="#">運営会社</a></li>
+        </ul>
+      </div>
+    </nav>
+  </transition>
+    <nav class="gnav sp-none">
       <div class="container mx-auto">
         <ul class="gnav__wrap">
           <li class="gnav__list"><a class="gnav__anchor" href="/">ホーム</a></li>
@@ -46,32 +50,18 @@
 </template>
 
 <script>
-import jQuery from 'jquery'
-global.jquery = jQuery
-global.$ = jQuery
-window.$ = window.jQuery = require('jquery')
-
 export default {
-  mounted: function() {
-    $('.js-btn-sp').click(function() {
-      $(this).toggleClass('is-active');
-      $(".gnav").toggleClass('is-active');
-    });
-  }
+  data() {
+    return {
+      isActive: false,
+      gnav: false,
+    }
+  },
+  methods: {
+    toggleMenu(e) {
+      this.isActive = !this.isActive
+      this.gnav = !this.gnav
+    },
+  },
 }
-
-// export default {
-//   data() {
-//     return {
-//       isActive: false,
-//       gnav: false,
-//     }
-//   },
-//   methods: {
-//     toggleMenu(e) {
-//       this.isActive = !this.isActive
-//       this.gnav = !this.gnav
-//     },
-//   },
-// }
 </script>
