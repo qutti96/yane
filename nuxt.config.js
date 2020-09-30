@@ -47,13 +47,13 @@ export default {
   plugins: [
     { src: '@/plugins/slick.js', ssr: false },
     // { src: '@/plugins/vue-slick.js', ssr: false },
-    // { src: '@/plugins/swiper', ssr: false },
+    { src: '@/plugins/swiper', ssr: false },
     '@/plugins/ui',
   ],
   build: {// プラグインがES6などで書かれている場合はビルドの指定も必要になる
     // transpile:['vue-slick-carousel']
     vendor: [
-      // 'vue-awesome-swiper',
+      'vue-awesome-swiper',
       'vue-slick-carousel'
     ],
     plugins: [

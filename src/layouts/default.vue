@@ -798,6 +798,7 @@ export default {
   justify-content: space-between;
 }
 
+/* non-slick
 .case-list__wrap .case-list:last-child {
   margin-right: 0;
 }
@@ -823,9 +824,9 @@ export default {
     width: 100%;
   }
 }
+ */
 
-
-/* slick * .case-list {
+.case-list {
   display: block;
   border: 2px solid #e8e8e8;
   border-radius: 10px;
@@ -835,7 +836,7 @@ export default {
   @media (--sp) {
   margin:0 8px;
   }
-} */
+}
 
 .case-list__img{
   width: 100%;
